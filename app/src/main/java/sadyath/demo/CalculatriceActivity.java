@@ -10,9 +10,12 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-public class CalculatriceActivity extends AppCompatActivity {
+public class Calculator  extends AppCompatActivity implements View.OnClickListener {
+    private Calculator calcul;
 
-        public enum Ops {
+
+
+    public enum Ops {
             PLUS("+"),
             MOINS("-"),
             FOIS("*"),
@@ -33,7 +36,7 @@ public class CalculatriceActivity extends AppCompatActivity {
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
+            setContentView(R.layout.activity_calculatrice);
 
             screen = (EditText) findViewById (R.id.screen);
             Button btnEgal = (Button)findViewById(R.id.btnEgal);
